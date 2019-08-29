@@ -8,6 +8,8 @@
 
 ![demo filter advanced desktop](demo.png)
 
+![demo filter advanced with scrollbar](demo-scrollbar.png)
+
 ![demo filter advanced mobile](demo-mobile.png)
 
 -   Support lazy load module.

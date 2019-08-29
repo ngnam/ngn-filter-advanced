@@ -1,3 +1,11 @@
+$scroll-size-horizontal: 10px;
+$scroll-size-veritcal: 10px;
+$color-clear: transparent;
+$color-base: #ffffff;
+$color-bg-page-border: #cbcfd5;
+$color-mid: #888;
+$color-primary: #274ac9;
+
 .form-search {
     .input-group-text {
         padding: 0 0.75rem;
@@ -69,3 +77,33 @@
     border-width: 10px;
     margin-left: -10px;
 }
+
+@mixin scroll-bar-style {
+    ::-webkit-scrollbar {
+        height: $scroll-size-horizontal;
+        width: $scroll-size-veritcal;
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color: $color-clear;
+
+        &:hover {
+            background-color: $color-base;
+        }
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: $color-bg-page-border;
+        border-radius: 10px;
+
+        &:hover {
+            background-color: $color-mid;
+        }
+    }
+
+    ::-webkit-scrollbar-button {
+        display: none;
+    }
+}
+
+@include scroll-bar-style();

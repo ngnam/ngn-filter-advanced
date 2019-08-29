@@ -65,10 +65,24 @@ export class AppComponent implements AfterViewInit, OnInit {
             },
             {
                 type: 'dx-datetime',
-                label: 'Date single',
-                name: 'FromDatetime',
+                label: 'Date single 1',
+                name: 'FromDatetime4',
                 placeholder: 'dd/mm/yyyy',
-                order: 6
+                order: 8
+            },
+            {
+                type: 'dx-datetime',
+                label: 'Date single 2',
+                name: 'FromDatetime3',
+                placeholder: 'dd/mm/yyyy',
+                order: 9
+            },
+            {
+                type: 'dx-datetime',
+                label: 'Date single 3',
+                name: 'FromDatetime2',
+                placeholder: 'dd/mm/yyyy',
+                order: 10
             },
             {
                 type: 'dx-select-with-api',
@@ -86,7 +100,7 @@ export class AppComponent implements AfterViewInit, OnInit {
                 type: 'dx-button',
                 label: 'Filter',
                 name: 'submitFilter',
-                order: 8
+                order: 99
             }
         ].sort((a, b) => a.order - b.order);
     }
