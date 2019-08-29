@@ -44,6 +44,7 @@
 
     <div
         *ngIf="isShowFilter && config"
+        [@fadeInOut]
         class="filter-advanced-content arrow_box"
     >
         <small *ngIf="config && config.length > 1">

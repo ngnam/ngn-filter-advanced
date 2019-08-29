@@ -28,11 +28,12 @@ export interface FieldConfig {
     name: string;
     options?:
         | string[]
-        | { key: string; value: string }
+        | { key: string; value: string; data?: any[] }
         | { key: string; value: string }[];
     placeholder?: string;
     type: string;
     api?: string;
     validation?: ValidatorFn[];
     value?: any;
+    order?: number;
 }

@@ -17,6 +17,7 @@ import { FormButtonComponent } from '../form-button/form-button.component';
 import { FormInputComponent } from '../form-input/form-input.component';
 import { FormSelectComponent } from '../form-select/form-select.component';
 import { FormSingleDateComponent } from '../form-single-date/form-single-date.component';
+import { FormSelectWithApiComponent } from '../form-select-with-api/form-select-with-api.component';
 
 // dx-input
 // dx-button
@@ -33,7 +34,8 @@ const components: { [type: string]: Type<Field> } = {
     'dx-button': FormButtonComponent,
     'dx-input': FormInputComponent,
     'dx-datetime': FormSingleDateComponent,
-    'dx-select-without-api': FormSelectComponent
+    'dx-select-without-api': FormSelectComponent,
+    'dx-select-with-api': FormSelectWithApiComponent
 };
 
 @Directive({

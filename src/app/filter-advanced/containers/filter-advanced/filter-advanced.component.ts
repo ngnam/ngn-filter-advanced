@@ -6,6 +6,7 @@ import {
     OnInit,
     Output
 } from '@angular/core';
+
 import {
     FormGroup,
     FormBuilder,
@@ -17,11 +18,13 @@ import {
 
 import { FieldConfig } from '../../models/field-config.interface';
 import { isNotEmpty } from '../../utilities';
+import { fadeInOutAnimation } from '../../animations/fadeInOut.animation';
 
 @Component({
     selector: 'app-filter-advanced',
     templateUrl: './filter-advanced.component.html',
-    styleUrls: ['./filter-advanced.component.scss']
+    styleUrls: ['./filter-advanced.component.scss'],
+    animations: [fadeInOutAnimation]
 })
 export class FilterAdvancedComponent implements OnChanges, OnInit {
     @Input()
@@ -46,8 +49,9 @@ export class FilterAdvancedComponent implements OnChanges, OnInit {
     isShowFilter = false;
 
     get controls() {
-        return this.config.filter(({ type }) => type !== 'button');
+        return this.config.filter(({ type }) => type !== 'dx-button');
     }
+
     get changes() {
         return this.form.valueChanges;
     }

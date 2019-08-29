@@ -10,10 +10,11 @@
 
 ![demo filter advanced mobile](demo-mobile.png)
 
--   ngif: show/hide display animation
--   Support lazy load module
--   Support filter with query text (default only search if no advanced)
--   Support multiple filter order by
+-   Support lazy load module.
+-   Support show/hide display with animation fadeInOut.
+-   Support filter with query text (default only search if no advanced).
+-   Support multiple filter query params.
+-   Support sort control filter by order property.
 -   Supported types:
     -   [x] dx-input
     -   [x] dx-button
@@ -72,8 +73,11 @@
 ### HOW
 
 -   Required:
+
     -   Install Bootstrap 4.3.1 `npm i bootstrap@4.3.1 --save` or latest stable version.
     -   Instal Devextreme and devextreme-angular 19.1.5 `npm i {devextreme@19.1.5, devextreme-angular@19.1.5 } --save` or latest stable version.
+    -   Add Animation module `BrowserAnimationsModule` in app.module `import { BrowserAnimationsModule } from '@angular/platform-browser/animations';`
+
 -   Import Theme:
 
 ```

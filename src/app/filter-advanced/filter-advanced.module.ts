@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -16,6 +16,7 @@ import { FormButtonComponent } from './components/form-button/form-button.compon
 import { FormInputComponent } from './components/form-input/form-input.component';
 import { FormSelectComponent } from './components/form-select/form-select.component';
 import { FormSingleDateComponent } from './components/form-single-date/form-single-date.component';
+import { FormSelectWithApiComponent } from './components/form-select-with-api/form-select-with-api.component';
 
 @NgModule({
     imports: [
@@ -34,7 +35,8 @@ import { FormSingleDateComponent } from './components/form-single-date/form-sing
         FormButtonComponent,
         FormInputComponent,
         FormSelectComponent,
-        FormSingleDateComponent
+        FormSingleDateComponent,
+        FormSelectWithApiComponent
     ],
     exports: [FilterAdvancedComponent],
     providers: [HttpRequestService],
@@ -42,7 +44,15 @@ import { FormSingleDateComponent } from './components/form-single-date/form-sing
         FormButtonComponent,
         FormInputComponent,
         FormSelectComponent,
-        FormSingleDateComponent
+        FormSingleDateComponent,
+        FormSelectWithApiComponent
     ]
 })
-export class FilterAdvancedModule {}
+export class FilterAdvancedModule {
+    static forFeature(httpService?: any): ModuleWithProviders {
+        return {
+            ngModule: FilterAdvancedModule,
+            providers: [{ provide: HttpRequestService, useClass: httpService }]
+        };
+    }
+}

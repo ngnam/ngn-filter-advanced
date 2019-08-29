@@ -23,45 +23,72 @@ export class AppComponent implements AfterViewInit, OnInit {
                 type: 'dx-input',
                 label: 'field input 1',
                 name: 'search1',
-                placeholder: 'Enter text'
+                placeholder: 'Enter text',
+                order: 2
             },
             {
                 type: 'dx-input',
                 label: 'field input 2',
                 name: 'search2',
-                placeholder: 'Enter text'
+                placeholder: 'Enter text',
+                order: 3
             },
             {
                 type: 'dx-input',
                 label: 'field input 3',
                 name: 'search3',
-                placeholder: 'Enter text'
+                placeholder: 'Enter text',
+                order: 5
             },
             {
                 type: 'dx-input',
                 label: 'field input 4',
                 name: 'search4',
-                placeholder: 'Enter text'
+                placeholder: 'Enter text',
+                order: 4
             },
             {
                 type: 'dx-select-without-api',
-                label: 'control without API',
+                label: 'Select without API',
                 name: 'Address',
-                options: ['Pizza', 'Hot Dogs', 'Knakworstje', 'Coffee'],
-                placeholder: 'Select an option'
+                options: {
+                    key: 'Id',
+                    value: 'Name',
+                    data: [
+                        { Id: 1, Name: 'Ha Noi' },
+                        { Id: 2, Name: 'Ho Chi Minh' },
+                        { Id: 3, Name: 'Da Nag' }
+                    ]
+                },
+                placeholder: 'Select an option',
+                order: 1
             },
             {
                 type: 'dx-datetime',
                 label: 'Date single',
                 name: 'FromDatetime',
-                placeholder: 'dd/mm/yyyy'
+                placeholder: 'dd/mm/yyyy',
+                order: 6
+            },
+            {
+                type: 'dx-select-with-api',
+                label: 'Select with API',
+                name: 'employee',
+                options: {
+                    key: 'id',
+                    value: 'name'
+                },
+                placeholder: 'Select an option',
+                api: `/assets/dropdown.data.json`,
+                order: 7
             },
             {
                 type: 'dx-button',
                 label: 'Filter',
-                name: 'submitFilter'
+                name: 'submitFilter',
+                order: 8
             }
-        ];
+        ].sort((a, b) => a.order - b.order);
     }
 
     ngAfterViewInit() {

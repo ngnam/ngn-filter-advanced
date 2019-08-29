@@ -3,20 +3,15 @@
         {{ config.label }}
     </label>
     <div class="col-12 col-md-10">
-        <!-- <select [formControlName]="config.name" class="form-control">
-            <option value="">{{ config.placeholder }}</option>
-            <option *ngFor="let option of config.options">
-                {{ option }}
-            </option>
-        </select> -->
         <dx-select-box
             class="form-control"
             width="100%"
             [formControlName]="config.name"
-            [dataSource]="config.options['data']"
+            [dataSource]="dataSource"
             [displayExpr]="config.options['value']"
             [valueExpr]="config.options['key']"
             [placeholder]="config.placeholder"
+            (onOpened)="onDropdownOpened()"
         ></dx-select-box>
     </div>
 </div>
