@@ -6,8 +6,9 @@
 
 ### Features
 
-    ![demo filter advanced desktop](demo.png)
-    ![demo filter advanced mobile](demo-mobile.png)
+![demo filter advanced desktop](demo.png)
+
+![demo filter advanced mobile](demo-mobile.png)
 
 -   ngif: show/hide display animation
 -   Support lazy load module
