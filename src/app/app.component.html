@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="mt-100"></div>
+    <h4>Form Validation:</h4>
+    {{ formFilter.valid }}
+    <h4>Form Value:</h4>
+    {{ formFilter.value | json }}
+    <div class="mt-100"></div>
+
+    <app-filter-advanced
+        #formFilter
+        [config]="config"
+        (submit)="submitFilter($event)"
+    >
+    </app-filter-advanced>
+</div>

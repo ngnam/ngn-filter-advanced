@@ -1,0 +1,21 @@
+<div class="form-group row" [formGroup]="group">
+    <label for="{{ config.name }}" class="col-12 col-md-2 col-form-label">
+        {{ config.label }}
+    </label>
+    <div class="col-12 col-md-10">
+        <dx-text-box
+            class="form-control"
+            mode="search"
+            [formControlName]="config.name"
+            [placeholder]="config.placeholder"
+        >
+            <dx-validator>
+                <dxi-validation-rule
+                    *ngIf="group.get(config.name).hasError('required')"
+                    type="required"
+                    message="{{ config.label }} is required"
+                ></dxi-validation-rule>
+            </dx-validator>
+        </dx-text-box>
+    </div>
+</div>

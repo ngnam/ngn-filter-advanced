@@ -1,0 +1,60 @@
+<form
+    class="filter-dynamic-form"
+    [formGroup]="form"
+    (submit)="handleSubmit($event)"
+    novalidate
+>
+    <div class="form-group row">
+        <div class="col-12">
+            <label class="sr-only" for="queryString">Search text</label>
+            <div class="input-group mb-2 form-search">
+                <div class="input-group-prepend">
+                    <div class="input-group-btn">
+                        <dx-button
+                            icon="chevrondown"
+                            [text]="showFilterText"
+                            [rtlEnabled]="true"
+                            [disabled]="
+                                !config || (config && config.length === 0)
+                            "
+                            (onClick)="showFilterAdvanced()"
+                        ></dx-button>
+                    </div>
+                </div>
+                <dx-text-box
+                    class="form-control"
+                    mode="search"
+                    name="queryString"
+                    formControlName="queryString"
+                    [placeholder]="defaultText"
+                    (onEnterKey)="onSearch()"
+                    (onValueChanged)="onClearSearch()"
+                >
+                    <dx-validator>
+                        <dxi-validation-rule
+                            *ngIf="form.get('queryString').hasError('required')"
+                            type="required"
+                            message="Vui lòng nhập vào trường này."
+                        ></dxi-validation-rule>
+                    </dx-validator>
+                </dx-text-box>
+            </div>
+        </div>
+    </div>
+
+    <div
+        *ngIf="isShowFilter && config"
+        class="filter-advanced-content arrow_box"
+    >
+        <small *ngIf="config && config.length > 1">
+            {{ helperFilterText }}
+        </small>
+        <ng-container
+            *ngFor="let field of config; let i = index"
+            dynamicField
+            [config]="field"
+            [group]="form"
+        >
+        </ng-container>
+    </div>
+</form>

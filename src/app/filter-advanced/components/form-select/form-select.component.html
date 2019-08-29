@@ -1,0 +1,13 @@
+<div class="form-group row form-select" [formGroup]="group">
+    <label for="{{ config.name }}" class="col-12 col-md-2 col-form-label">
+        {{ config.label }}
+    </label>
+    <div class="col-12 col-md-10">
+        <select [formControlName]="config.name" class="form-control">
+            <option value="">{{ config.placeholder }}</option>
+            <option *ngFor="let option of config.options">
+                {{ option }}
+            </option>
+        </select>
+    </div>
+</div>

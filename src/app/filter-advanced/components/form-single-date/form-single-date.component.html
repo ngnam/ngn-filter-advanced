@@ -1,0 +1,24 @@
+<div class="form-group row" [formGroup]="group">
+    <label for="{{ config.name }}" class="col-12 col-md-2 col-form-label">
+        {{ config.label }}
+    </label>
+    <div class="col-12 col-md-10">
+        <dx-date-box
+            class="form-control"
+            [placeholder]="config.placeholder"
+            [showClearButton]="true"
+            [formControlName]="config.name"
+            displayFormat="dd/MM/yyyy"
+            width="100%"
+            type="date"
+        >
+            <dx-validator>
+                <dxi-validation-rule
+                    *ngIf="group.get(config.name).hasError('required')"
+                    type="required"
+                    message="{{ config.label }} is required"
+                ></dxi-validation-rule>
+            </dx-validator>
+        </dx-date-box>
+    </div>
+</div>
