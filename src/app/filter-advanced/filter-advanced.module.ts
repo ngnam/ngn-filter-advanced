@@ -8,7 +8,8 @@ import {
     DxDateBoxModule,
     DxSelectBoxModule,
     DxValidatorModule,
-    DxButtonModule
+    DxButtonModule,
+    DxTagBoxModule
 } from 'devextreme-angular';
 import { DynamicFieldDirective } from './components/dynamic-field/dynamic-field.directive';
 import { FilterAdvancedComponent } from './containers/filter-advanced/filter-advanced.component';
@@ -17,6 +18,7 @@ import { FormInputComponent } from './components/form-input/form-input.component
 import { FormSelectComponent } from './components/form-select/form-select.component';
 import { FormSingleDateComponent } from './components/form-single-date/form-single-date.component';
 import { FormSelectWithApiComponent } from './components/form-select-with-api/form-select-with-api.component';
+import { FormTagBoxComponent } from './components/form-tagbox/form-tagbox.component';
 
 @NgModule({
     imports: [
@@ -27,7 +29,8 @@ import { FormSelectWithApiComponent } from './components/form-select-with-api/fo
         DxDateBoxModule,
         DxSelectBoxModule,
         DxValidatorModule,
-        DxButtonModule
+        DxButtonModule,
+        DxTagBoxModule
     ],
     declarations: [
         DynamicFieldDirective,
@@ -36,7 +39,8 @@ import { FormSelectWithApiComponent } from './components/form-select-with-api/fo
         FormInputComponent,
         FormSelectComponent,
         FormSingleDateComponent,
-        FormSelectWithApiComponent
+        FormSelectWithApiComponent,
+        FormTagBoxComponent
     ],
     exports: [FilterAdvancedComponent],
     providers: [HttpRequestService],
@@ -45,7 +49,8 @@ import { FormSelectWithApiComponent } from './components/form-select-with-api/fo
         FormInputComponent,
         FormSelectComponent,
         FormSingleDateComponent,
-        FormSelectWithApiComponent
+        FormSelectWithApiComponent,
+        FormTagBoxComponent
     ]
 })
 export class FilterAdvancedModule {

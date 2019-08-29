@@ -97,6 +97,13 @@ export class AppComponent implements AfterViewInit, OnInit {
                 order: 7
             },
             {
+                type: 'dx-tagbox',
+                label: 'tags',
+                name: 'tags',
+                placeholder: 'Enter a tag name',
+                order: 11
+            },
+            {
                 type: 'dx-button',
                 label: 'Filter',
                 name: 'submitFilter',

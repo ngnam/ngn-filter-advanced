@@ -1,0 +1,15 @@
+<div class="form-group row" [formGroup]="group">
+    <label for="{{ config.name }}" class="col-12 col-md-2 col-form-label">
+        {{ config.label }}
+    </label>
+    <div class="col-12 col-md-10">
+        <dx-tag-box
+            class="form-control"
+            acceptCustomValue="true"
+            [name]="config.name"
+            [formControlName]="config.name"
+            [placeholder]="config.placeholder"
+        >
+        </dx-tag-box>
+    </div>
+</div>
