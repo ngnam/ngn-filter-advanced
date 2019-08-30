@@ -94,7 +94,7 @@ export class AppComponent implements AfterViewInit, OnInit {
                     value: 'name'
                 },
                 placeholder: 'Select an option',
-                api: `/assets/dropdown.data.json`,
+                api: `assets/dropdown.data.json`,
                 order: 7
             },
             {
