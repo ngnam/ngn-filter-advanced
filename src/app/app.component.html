@@ -1,14 +1,28 @@
 <div class="container">
-    <div class="mt-100"></div>
-    <h4>Form Validation:</h4>
-    {{ formFilter.valid }}
-    <h4>Form Value:</h4>
-    {{ formFilter.value | json }}
-
+    <h1 class="page-header">Filter advanced dynamic</h1>
     <app-filter-advanced
         #formFilter
         [config]="config"
         (submit)="submitFilter($event)"
     >
     </app-filter-advanced>
+    <h1>Output search filter:</h1>
+    <hr />
+    <h5>Form valid:</h5>
+    <code>{{ formFilter.valid }}</code>
+    <hr />
+
+    <h5>Form Value:</h5>
+    <code>{{ formFilter.value | json }}</code>
+    <hr />
+
+    <h5>Object params:</h5>
+    <code>{{ objectParrams | json }}</code>
+    <hr />
+
+    <h5>String params:</h5>
+    <code>
+        {{ stringParrams }}
+    </code>
+    <hr />
 </div>

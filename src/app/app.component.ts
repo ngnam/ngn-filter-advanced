@@ -1,10 +1,10 @@
 import { Component, ViewChild, AfterViewInit, OnInit } from '@angular/core';
-import { Validators } from '@angular/forms';
-import {
-    FieldConfig,
-    FieldType
-} from './filter-advanced/models/field-config.interface';
+import { FieldConfig } from './filter-advanced/models/field-config.interface';
 import { FilterAdvancedComponent } from './filter-advanced/containers/filter-advanced/filter-advanced.component';
+import {
+    mapToObjectParam,
+    mapToStringParam
+} from './filter-advanced/utilities';
 
 @Component({
     selector: 'my-app',
@@ -14,7 +14,8 @@ import { FilterAdvancedComponent } from './filter-advanced/containers/filter-adv
 export class AppComponent implements AfterViewInit, OnInit {
     @ViewChild(FilterAdvancedComponent, { static: true })
     formFilter: FilterAdvancedComponent;
-
+    objectParrams = {};
+    stringParrams = '';
     config: FieldConfig[] = [];
 
     ngOnInit() {
@@ -114,7 +115,10 @@ export class AppComponent implements AfterViewInit, OnInit {
 
     ngAfterViewInit() {
         let previousValid = this.formFilter.valid;
-        this.formFilter.changes.subscribe(() => {
+        this.formFilter.changes.subscribe(data => {
+            // map form value
+            this.objectParrams = mapToObjectParam(data);
+            this.stringParrams = mapToStringParam(data);
             if (this.formFilter.valid !== previousValid) {
                 previousValid = this.formFilter.valid;
             }

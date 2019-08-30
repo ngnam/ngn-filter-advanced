@@ -30,33 +30,20 @@ $color-primary: #274ac9;
     background-color: #fff;
 }
 
-.filter-dynamic-form {
-    position: relative;
-    .filter-advanced-content {
-        position: absolute;
-        width: 100%;
-        height: 500px;
-        overflow: auto;
-        top: 43px;
-        padding: 1em;
-        border: 1px solid #ddd;
-        z-index: 9;
-        -webkit-box-shadow: rgb(158, 156, 158) 0px 2px 4px 0px;
-        -moz-box-shadow: rgb(158, 156, 158) 0px 2px 4px 0px;
-        box-shadow: rgb(158, 156, 158) 0px 2px 4px 0px;
-        background-color: rgb(255, 255, 255);
-    }
-}
-
 .arrow_box {
-    position: relative;
-    background: #ffff;
+    // position: relative;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #fff;
     border: 1px solid #ddd;
+    max-height: 520px;
+    min-height: 520px;
 }
 .arrow_box:after,
 .arrow_box:before {
     bottom: 100%;
-    left: 5%;
+    left: calc(5% - 5px);
     border: solid transparent;
     content: ' ';
     height: 0;
@@ -66,16 +53,38 @@ $color-primary: #274ac9;
 }
 
 .arrow_box:after {
-    border-color: rgba(0, 0, 0, 0);
-    border-bottom-color: #ffff;
-    border-width: 9px;
-    margin-left: -9px;
+    border-color: rgba(255, 255, 255, 0);
+    border-bottom-color: #fff;
+    border-width: 10px;
+    margin-left: -10px;
 }
 .arrow_box:before {
     border-color: rgba(221, 221, 221, 0);
     border-bottom-color: #ddd;
-    border-width: 10px;
-    margin-left: -10px;
+    border-width: 11px;
+    margin-left: -11px;
+}
+
+.mt--15 {
+    margin-top: -15px !important;
+}
+
+.filter-dynamic-form {
+    position: relative;
+    .filter-advanced-content {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        top: 0;
+        padding: 1em;
+        z-index: 9;
+        &.box-shadow {
+            -webkit-box-shadow: #ebebeb 0px 2px 2px 0px;
+            -moz-box-shadow: #ebebeb 0px 2px 2px 0px;
+            box-shadow: #ebebeb 0px 2px 2px 0px;
+        }
+    }
 }
 
 @mixin scroll-bar-style {

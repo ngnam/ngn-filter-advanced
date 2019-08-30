@@ -14,3 +14,14 @@ install:
 
 script:
     - npm run build
+
+deploy:
+    provider: pages
+    name: ngnam
+    email: nguyenvannam0411@gmail.com
+    skip_cleanup: true
+    github_token: e0ae6559a69b5675b997f607ef115f53c34fb273 # Set in the settings page of your repository, as a secure variable
+    keep_history: true
+    local_dir: dist/demo
+    on:
+        branch: master

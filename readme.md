@@ -2,15 +2,20 @@
 
 [![Build Status](https://travis-ci.org/ngnam/ngn-filter-advanced.svg?branch=master)](https://travis-ci.org/ngnam/ngn-filter-advanced)
 
-### Features
+## DEMOS
 
 -   Demo Online: [View Demo here](https://ngnam.github.io/ngn-filter-advanced)
 
-![demo filter advanced desktop](demo.png)
+![desktop](demo.png=200x100)
+![desktop form](demo-fill-form.png=200x100)
+![demo scrollbar](demo-scrollbar.png=200x100)
+![demo-map-object](demo-map-object.png=200x100)
+![demo-output-form](demo-output-form.png=200x100)
+![demo-mobile](demo-mobile.png=200x100)
 
-![demo filter advanced with scrollbar](demo-scrollbar.png)
+## Features
 
-![demo filter advanced mobile](demo-mobile.png)
+-   Demo Online: [View Demo here](https://ngnam.github.io/ngn-filter-advanced)
 
 -   Support lazy load module.
 -   Support show/hide display with animation fadeInOut.
@@ -41,7 +46,6 @@
         .....
         -   [x]  add more list type component
     };
-
 ```
 
 -   Support Change custom button for display label, name
@@ -72,7 +76,9 @@
     </small>
 ```
 
-### HOW
+-   :new: Support function map form value to Object Params & string query params
+
+## HOW
 
 -   Required:
 

@@ -41,21 +41,18 @@
             </div>
         </div>
     </div>
-
-    <div
-        *ngIf="isShowFilter && config"
-        [@fadeInOut]
-        class="filter-advanced-content arrow_box"
-    >
-        <small *ngIf="config && config.length > 1">
-            {{ helperFilterText }}
-        </small>
-        <ng-container
-            *ngFor="let field of config; let i = index"
-            dynamicField
-            [config]="field"
-            [group]="form"
-        >
-        </ng-container>
+    <div *ngIf="isShowFilter && config" [@fadeInOut] class="arrow_box mt--15">
+        <div class="filter-advanced-content box-shadow">
+            <small *ngIf="config && config.length > 1">
+                {{ helperFilterText }}
+            </small>
+            <ng-container
+                *ngFor="let field of config; let i = index"
+                dynamicField
+                [config]="field"
+                [group]="form"
+            >
+            </ng-container>
+        </div>
     </div>
 </form>
