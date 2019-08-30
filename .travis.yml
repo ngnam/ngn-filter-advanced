@@ -14,14 +14,3 @@ install:
 
 script:
     - npm run build
-
-deploy:
-    provider: pages
-    name: ngnam
-    email: nguyenvannam0411@gmail.com
-    skip_cleanup: true
-    github_token: fb93c5738962101efbb5bf03cfd6af4e2c33f9c4
-    keep_history: true
-    local_dir: dist/demo
-    on:
-        branch: master
