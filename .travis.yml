@@ -15,12 +15,21 @@ install:
 script:
     - npm run build
 
+## Update composer and run the appropriate composer command
+before_script:
+    - composer self-update -q
+    - if [ -n "$GH_TOKEN" ]; then composer config github-oauth.github.com ${GH_TOKEN}; fi;
+    - if [ -z "$dependencies" ]; then composer install; fi;
+    - if [ "$dependencies" = "lowest" ]; then composer update --prefer-lowest -n; fi;
+    - if [ "$dependencies" = "highest" ]; then composer update -n; fi;
+    - composer show -i
+
 deploy:
     provider: pages
     name: ngnam
     email: nguyenvannam0411@gmail.com
     skip_cleanup: true
-    github_token: e0ae6559a69b5675b997f607ef115f53c34fb273 # Set in the settings page of your repository, as a secure variable
+    github_token: fb93c5738962101efbb5bf03cfd6af4e2c33f9c4
     keep_history: true
     local_dir: dist/demo
     on:
