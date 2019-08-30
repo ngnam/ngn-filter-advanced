@@ -6,12 +6,12 @@
 
 -   Demo Online: [View Demo here](https://ngnam.github.io/ngn-filter-advanced)
 
-<img alt="desktop" width="200" height="100" src="demo.png" />
-<img alt="desktop form" width="200" height="100" src="demo-fill-form.png" />
-<img alt="demo scrollbar" width="200" height="100" src="demo-scrollbar.png" />
-<img alt="demo-map-object" width="200" height="100" src="demo-map-object.png" />
-<img alt="demo-output-form" width="200" height="100" src="demo-output-form.png" />
-<img alt="demo-mobile" width="200" height="100" src="demo-mobile.png" />
+![desktop](demo.png)
+![desktop form](demo-fill-form.png)
+![demo scrollbar](demo-scrollbar.png)
+![demo-map-object](demo-map-object.png)
+![demo-output-form](demo-output-form.png)
+![demo-mobile](demo-mobile.png)
 
 ## Features
 
