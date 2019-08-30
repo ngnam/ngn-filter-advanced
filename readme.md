@@ -1,8 +1,6 @@
 ## Filter Advanced Module
 
--   Author
-    -   Name: ngnam
-    -   email: nguyenvannam0411@gmail.com
+[![Build Status](https://travis-ci.org/ngnam/ngn-filter-advanced.svg?branch=master)](https://travis-ci.org/ngnam/ngn-filter-advanced)
 
 ### Features
 
