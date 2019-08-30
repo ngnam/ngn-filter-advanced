@@ -6,12 +6,14 @@
         <dx-select-box
             class="form-control"
             width="100%"
+            showClearButton="true"
             [formControlName]="config.name"
             [dataSource]="dataSource"
             [displayExpr]="config.options['value']"
             [valueExpr]="config.options['key']"
             [placeholder]="config.placeholder"
             (onOpened)="onDropdownOpened()"
+            [value]="config.value"
         ></dx-select-box>
     </div>
 </div>

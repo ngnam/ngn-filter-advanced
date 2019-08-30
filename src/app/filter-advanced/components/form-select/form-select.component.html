@@ -12,11 +12,13 @@
         <dx-select-box
             class="form-control"
             width="100%"
+            showClearButton="true"
             [formControlName]="config.name"
             [dataSource]="config.options['data']"
             [displayExpr]="config.options['value']"
             [valueExpr]="config.options['key']"
             [placeholder]="config.placeholder"
+            [value]="config.value"
         ></dx-select-box>
     </div>
 </div>
